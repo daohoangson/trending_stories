@@ -1,0 +1,38 @@
+service: trending-stories-gcf
+
+provider:
+  name: google
+  stage: dev
+  runtime: nodejs8
+  region: asia-east2
+  project: trending-stories-240503
+  credentials: /app/keys/google.json
+
+plugins:
+  - serverless-google-cloudfunctions
+
+package:
+  exclude:
+    - node_modules/**
+    - .gitignore
+    - .git/**
+
+functions:
+  proxy128:
+    events:
+      - http: path
+    handler: proxy128
+    memorySize: 128
+    timeout: 60s
+  proxy256:
+    events:
+      - http: path
+    handler: proxy256
+    memorySize: 256
+    timeout: 60s
+  proxy512:
+    events:
+      - http: path
+    handler: proxy512
+    memorySize: 512
+    timeout: 60s

@@ -1,0 +1,8 @@
+{
+  "name": "trending-stories-gcf",
+  "version": "0.1.0",
+  "main": "index.js",
+  "devDependencies": {
+    "serverless-google-cloudfunctions": "*"
+  }
+}
