@@ -25,6 +25,6 @@ fp.on("readable", function() {
 
   var item;
   while ((item = feed.read())) {
-    console.log(item.date, item.link);
+    console.log(Math.floor(item.date.getTime() / 1000), item.link);
   }
 });
