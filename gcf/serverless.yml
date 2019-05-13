@@ -36,3 +36,21 @@ functions:
     handler: proxy512
     memorySize: 512
     timeout: 60s
+  parse256:
+    events:
+      - http: path
+    handler: parse256
+    memorySize: 256
+    timeout: 60s
+  parse512:
+    events:
+      - http: path
+    handler: parse512
+    memorySize: 512
+    timeout: 60s
+  parse1024:
+    events:
+      - http: path
+    handler: parse1024
+    memorySize: 1024
+    timeout: 60s
